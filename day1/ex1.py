@@ -1,28 +1,20 @@
-# 简单装饰器
-def my_decorator(func):
-    def wrapper():
-        print("Before function")
-        func()
-        print("After function")
-    return wrapper
+# 变量类型
+name = "Alice"  # str
+age = 20        # int
+grades = [90, 85, 88]  # list
+info = {"name": "Alice", "age": 20}  # dict
 
-@my_decorator
-def say_hello():
-    print("Hello!")
+# 类型转换
+age_str = str(age)
+number = int("123")
 
-say_hello()
+# 作用域
+x = 10  # 全局变量
+def my_function():
+    y = 5  # 局部变量
+    global x
+    x += 1
+    print(f"Inside function: x={x}, y={y}")
 
-# 带参数的装饰器
-def repeat(n):
-    def decorator(func):
-        def wrapper(*args, **kwargs):
-            for _ in range(n):
-                func(*args, **kwargs)
-        return wrapper
-    return decorator
-
-@repeat(3)
-def greet(name):
-    print(f"Hi, {name}!")
-
-greet("Alice")
+my_function()
+print(f"Outside function: x={x}")

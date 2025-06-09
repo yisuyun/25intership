@@ -1,15 +1,16 @@
-# 写文件
-with open("example.txt", "w") as f:
-    f.write("Hello, World!\n")
+# 算术运算
+a = 10
+b = 3
+print(a + b)  # 13
+print(a // b)  # 3（整除）
+print(a ** b)  # 1000（幂）
 
-# 读文件
-with open("example.txt", "r") as f:
-    content = f.read()
-    print(content)
+# 逻辑运算
+x = True
+y = False
+print(x and y)  # False
+print(x or y)   # True
 
-# 处理CSV
-import csv
-with open("data.csv", "w", newline="") as f:
-    writer = csv.writer(f)
-    writer.writerow(["Name", "Age"])
-    writer.writerow(["Alice", 20])
+# 比较运算
+print(a > b)  # True
+   
