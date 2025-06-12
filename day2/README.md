@@ -101,8 +101,6 @@ for data in dataloader:
 定义我们的网络模型
 ```
 
-![image.png](attachment:59df05a7-f114-4c4a-95c5-be72ea153ecc:image.png)
-
 ### tensorboard使用
 
 使用之前安装一下tensorboard
